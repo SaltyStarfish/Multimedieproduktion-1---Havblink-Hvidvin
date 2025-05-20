@@ -121,6 +121,12 @@ header label{
 
 /* mobil-visning */
 @media screen and (max-width:1024px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     #logo-burger-container{
         display: flex;
         flex-direction: row;
@@ -141,15 +147,13 @@ header label{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
         background-color: var(--hvid);
         width: 100vw;
-        padding: 50px;
+        padding: 25px 10% auto auto;
+        min-height: 100vh;
     } 
 
-    nav{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
 
 }
