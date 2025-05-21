@@ -187,3 +187,36 @@ header label{
         flex-direction: column;
     }
 }
+
+footer{
+    background-color: var(--blaa);
+    color: var(--hvid);
+}
+
+.footer-content{
+    margin: auto;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5% 4rem 5%;
+    gap: 5%;
+
+}
+
+.footer-content > div{
+    flex: 1 1 0;
+    width: 20%;
+}
+
+footer iframe{
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    border: 2px solid var(--hvid);
+}
+
+#some-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
