@@ -1,0 +1,19 @@
+
+/* ....................forside................... */
+/* Hero */
+#hero-container {
+    width: 100vw; /* Fylder hele bredden af skærmen */
+    max-height: 700px; /* Maksimal højde på containeren */
+    min-height: 300px; /* Minimum højde på containeren */
+    overflow: hidden; /* Beskærer overskydende dele af videoen */
+}
+
+#hero-container img {
+    width: 100vw; /* Fylder hele skærmbredden */
+    height: auto; /* Bevarer aspektforholdet */
+    min-height: 300px; /* Minimum højde */
+    max-height: 700px; /* Maksimum højde */
+    object-fit: cover; /* Beskærer video korrekt */
+}
+/* hero */
+

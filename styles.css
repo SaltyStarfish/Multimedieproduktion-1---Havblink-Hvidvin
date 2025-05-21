@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 /*.................. RESET CSS............. */
 
@@ -39,7 +40,8 @@ li, a, button{
 
 
 /*..................GENEREL STYLES.............*/
-/* Farver */
+
+/* Farver der genbruges mange steder kan bestemmes og ændres her*/
 :root{
   --orange:#f6a902;
   --gul:#fec912;
@@ -52,10 +54,21 @@ li, a, button{
   --shadow:#3030302e;
 }
 
+/* Typografi */
+body{ font: 400 0.875rem/1.5 "Inter", sans-serif;}
+header{font: 400 0.75rem/1.5 "Inter", sans-serif;}
+h1{font: 400 4rem/1.5 "Lora", serif; text-transform: uppercase;}
+h2{font: 700 2rem/1.5 "Lora", serif; text-transform: uppercase}
+h3{font: 700 1rem/1.5 "Lora", serif;}
+blockquote{font: italic 700 1rem/1.5 "Lora", serif;}
+figcaption{font: 800 0.875rem/1.5 "Inter", serif; letter-spacing: 20%;}
+
+
+
+
 body{
     background-color:var(--hvid); /* lys baggrund */
     overflow-x: hidden;/* undgå horisontal scroll-bar */
-    font-family: 'inter', Arial, Helvetica, sans-serif;/* Inter/sans-serif som standard typografi*/
 }
 
 main{
@@ -70,3 +83,19 @@ main a {
 main a:hover{
     color: var(--gul);
 }
+
+.texture{
+    background-image:url(https://images.unsplash.com/photo-1601662528567-526cd06f6582?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.single{
+    text-align: center;
+    padding: 30px 5%;
+}
+
+.single p{
+    justify-self: center;
+    max-width: 600px;
+}
+
+
