@@ -72,9 +72,11 @@ header label{
     cursor: pointer;
 }
 
+/*subnav*/
 #nav-list{
     display: flex;
     align-items: center;
+    justify-content: center;
 } 
 
 
@@ -83,17 +85,18 @@ header label{
     position: absolute;
     left: 0;
     overflow: hidden; /*nødvendig for at linjerne ikke bliver for høje, og går op i nav'en og forstyrrer floet*/
-    background-color: var(--blaa);
+    background-color: var(--groen);
     width: 100%;
-    height: 60px;
+    height: 80px;
     z-index: 1;
 }
 
 .subnav-list a {
-    line-height: 50;
+    line-height: 80px;
 }
 
 .subnav-list li:hover {
+    color: var(--gul);
     box-shadow: none;
 }
 
@@ -198,14 +201,13 @@ footer{
     max-width: 1024px;
     display: flex;
     justify-content: space-between;
-    padding: 2rem 5% 4rem 5%;
+    padding: 2rem;
     gap: 5%;
 
 }
 
 .footer-content > div{
     flex: 1 1 0;
-    width: 20%;
 }
 
 footer iframe{
