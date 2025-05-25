@@ -21,7 +21,6 @@ body {
     min-height: 100vh;
 }
 
-
 /* responsive images/videos */
 img, picture, svg, video {
     display: block;
@@ -42,7 +41,7 @@ li, a, button{
 :root{
   --orange:#f6a902;
   --gul:#fec912;
-  --groen:#96a94b;
+  --groen:#a6be47;
   --mango:linear-gradient(to right, var(--groen), var(--orange));
   --blaa:#194d62;
   --blaa2:25, 77, 98;
@@ -54,23 +53,22 @@ li, a, button{
 /* Typografi */
 body{ font: 400 0.875rem/1.5 "Inter", sans-serif;}
 header{font: 400 0.75rem/1.5 "Inter", sans-serif; text-transform: uppercase;}
-h1{font: 400 3.5rem/1.5 "Lora", serif; text-transform: uppercase; padding: 1.5rem 0;}
-/* h2{font: 500 2rem/1.5 "Lora", serif; text-transform: uppercase; padding: 1rem 0;} */
-h2{font: 500 24/1.5 "Lora", serif; text-transform: uppercase; padding: 1rem 0;}
-
+h1{font: 400 3.5rem/1 "Lora", serif; text-transform: uppercase; padding: 1rem 0;}
+h2{font: 500 2rem/1.5 "Lora", serif; text-transform: uppercase; padding: 1rem 0;}
 h3{font: 700 1rem/1.5 "Lora", serif; padding: .5rem 0;}
 blockquote{font: italic 700 1rem/1.5 "Lora", serif;}
 figcaption{font: 800 0.75rem/1.5 "Inter", serif; letter-spacing: .2em;}
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color:var(--hvid); /* lys baggrund */
-    overflow-x: hidden;/* undgå horisontal scroll-bar */
-    margin-top: 80px;
 }
 
 main{
-    margin:0 auto;
+    margin:80px auto 0 auto;
 }
 
 main a, footer a {
@@ -81,6 +79,8 @@ main a:hover, footer a:hover{
     color: var(--gul);
 }
 
+
+/* sektionselementer/ "Byggeklodser" */
 .texture{
     background-image:url(https://images.unsplash.com/photo-1601662528567-526cd06f6582?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
@@ -90,60 +90,63 @@ main a:hover, footer a:hover{
     background-image: url(assets/green-waves.svg);
 }
 
+.full-width-background > *{
+margin: 0 auto;
+max-width: 1024px;
+}
+
+.flexbox{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+
+
+.flexbox > .tom-div{
+    flex: 1 1 0;
+}
+
+.flexbox p{
+    max-width: 60ch; /*sikrer at tekst-felter ikke bliver for brede (60 tegn (0'er))*/
+    margin: 0 auto 0 0;
+}
+
 .single{
     text-align: center;
-    padding: 2rem 5% 4rem 5%; /*giver lidt white-space omkring teksten*/ 
+    padding: 2rem 1rem 4rem 1rem; /*giver lidt white-space over og under omkring teksten*/ 
+    text-wrap: pretty; /*undgår at et enkelt ord bliver efterladt på en linje for sig selv - måske ikke alle browsere, der kender udtrykket*/
 }
-
-.single p{
-    justify-self: center;
-    max-width: 72ch; /*sikrer at tekst-feltet ikke bliver for bredt (60 tegn)*/
-    text-align: center;
-    text-wrap: pretty; /*undgår at et enkelt ord bliver efterladt på en linje for sig selv*/
-}
-
-
-
-.fitty-fitty{
-    max-width: 1024px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 5%;
-    align-items: center;
-    margin: auto; /*giver lidt white-space omkring teksten*/ 
-    padding: 2rem 5% 4rem 5%;
-}
-
-.fitty-fitty-text{
-    max-width: 60ch; /*sikrer at tekst-feltet ikke bliver for bredt (60 tegn)*/
-    min-width: 40ch;
-    flex: 2 1 0;
+.single p{   
+    max-width: 72ch; /*sikrer at tekst-feltet ikke bliver for bredt (72 tegn (0'er))*/
+    margin: 0 auto 0 auto;
 }
 
 .polaroid{
-    display: flex;
-    flex: 1 1 0;
-    flex-direction: column;
-    padding: 1rem;
-    aspect-ratio: 4/5;
-    background-color: var(--hvid);
-    box-shadow: 0 4px 4px 0 var(--shadow);
-    border: 1px solid var(--shadow);
+  display: flex;
+  flex: 4 4 0;
+  flex-direction: column;
+  border: 1px solid var(--shadow);
+  background-color: var(--hvid);
+  box-shadow: 0 4px 4px 0 var(--shadow);
+  padding: 14px;
+  gap: 14px;
+  aspect-ratio: 4/5;
 }
 
 .polaroid img{
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border: 1px solid var(--shadow);
-
+  flex: 4 4 0;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--shadow);
+  object-fit: cover;
 }
 
 .polaroid figcaption{
-    display: flex;
-    height: 20%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

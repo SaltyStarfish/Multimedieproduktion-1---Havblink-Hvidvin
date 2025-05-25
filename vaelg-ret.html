@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vælg vin efter ret | Havblink Hvidvin</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="vin-til-mad.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
 <!-- top-navigation med dropdown menuer -->
         <nav>
             <div id="logo-burger-container">
-                <a href="index.html" target="_self"><img id="logo" src="assets/Havblink-logo-sort-fullsize.png" alt="HAVBLINK - Gå til forsiden."></a>
+                <a id="logo" href="index.html" target="_self"><img src="assets/Havblink-logo-sort-fullsize.png" alt="HAVBLINK - Gå til forsiden."></a>
                 <label for="toggle">&#9776;</label>
             </div>
             <input type="checkbox" id="toggle">
@@ -79,16 +80,17 @@
 
 <main>
 <div class="waves full-width-background">
-    <div class="flexbox">
+    <div class="flexbox" id="flexbox-vaelg-ret">
         <section>
-            <h1>Vin-vælger: <br> Find vin til mad</h1>
+            <h2>Vin-guide:</h2>
+            <h1>Find vin til mad</h1>
             <p>Du behøver ikke være vinekspert for at vælge den helt rigtige vin. Man kommer langt med et par gode råd og anmeldelser.
                 <br><br>
                 Vælg den type mad, vinen skal passe til, så hjælper vi dig videre med konkrete og kvalificerede vin-anbefalinger.
                 <br><br>
             </p>
         </section>
-        <ul class="kategori-hjul">
+        <menu class="kategori-hjul">
             <li>
                 <h2>Asiatisk</h2>
             </li>
@@ -140,7 +142,7 @@
             <li>
                 <h2>Vegetarisk</h2>
             </li>
-        </ul>
+        </menu>
     </div>
 </div>
     <div class="full-width-background texture">
@@ -157,9 +159,9 @@
         </div>
     </div>
 </main>
-        <footer>
-            <div class="footer-content">
-                <div>
+    <footer class="full-width-background">
+        <div class="flexbox">
+            <section>
                 <h3>Åbningstider</h3>
                 <p>
                     Mandag: ..... 9.00 - 16.00 <br>
@@ -179,8 +181,8 @@
                     <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.svg" alt="Instagram"></a>
                     <a href="https://www.tripadvisor.dk/" target="_blank"><img src="assets/tripadvisor.svg" alt="Tripadvisor"></a>
                 </div>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3>Adresse</h3>
                 <p>
                     Kystvejen 39 <br>
@@ -190,10 +192,8 @@
                 <h3>Kontakt</h3>
                 <p>Tlf.: 39 39 39 39 <br>
                 Mail.: kontakt@havblink.dk</p>
-            </div>
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191282.0071025764!2d10.51918382220324!3d55.094437935247676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464d35c3af03b073%3A0xc2e6af39fb8b989e!2sStrandvejen%2052-64%2C%205882%20Vejstrup!5e1!3m2!1sda!2sdk!4v1747863181191!5m2!1sda!2sdk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            </section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191282.0071025764!2d10.51918382220324!3d55.094437935247676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464d35c3af03b073%3A0xc2e6af39fb8b989e!2sStrandvejen%2052-64%2C%205882%20Vejstrup!5e1!3m2!1sda!2sdk!4v1747863181191!5m2!1sda!2sdk" style="border: 2px solid var(--hvid);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
 

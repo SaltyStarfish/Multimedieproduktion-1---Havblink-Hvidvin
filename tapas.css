@@ -1,0 +1,25 @@
+
+.vin-hjul{
+    display: flex;
+    height: 300px;
+    flex-direction: row;
+    padding: 14px;
+    gap: 14px;
+    box-shadow: 4px 0 var(--shadow), -4px 0 var(--shadow);
+    flex: 1 1 0;
+    overflow-x: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.vin-hjul::-webkit-scrollbar {
+    display:none;
+}
+
+
+.vin-hjul .polaroid{
+    flex: 1 1 0;
+    height: 100%;
+}

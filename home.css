@@ -3,20 +3,22 @@
 /* Hero */
 #hero-container {
     width: 100vw; /* Fylder hele bredden af skærmen */
-    max-height: 700px; /* Maksimal højde på containeren */
-    min-height: 500px; /* Minimum højde på containeren */
+    height: 90vh;
     overflow: hidden; /* Beskærer overskydende dele af videoen */
 }
 
 #hero-container img {
     width: 100vw; /* Fylder hele skærmbredden */
     height: auto; /* Bevarer aspektforholdet */
-    min-height: 500px; /* Minimum højde */
-    max-height: 700px; /* Maksimum højde */
+    height: 90vh;
     object-fit: cover; /* Beskærer video korrekt */
 }
 
-h1{font: 500 2rem/1.5 "Lora", serif; text-transform: uppercase; padding: 1rem;}
 
 /* hero */
 
+h1{font: 500 2rem/1.5 "Lora", serif; text-transform: uppercase; padding: 1rem;}
+
+.flexbox section{
+  flex: 8 8 0;
+}
