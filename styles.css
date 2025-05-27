@@ -32,14 +32,13 @@ li, a, button{
 /* Farver der genbruges mange steder kan bestemmes og ændres her*/
 :root{
   --orange:#f6a902;
-  --gul:#fec912;
+  --gul:#f4cc70;
   --groen:#a6be47;
-  --mango:linear-gradient(to right, var(--groen), var(--orange));
   --blaa:#194d62;
-  --blaa2:25, 77, 98;
-  --hvid:#fdfdf5;
-  --sort:#303030;
-  --shadow:#3030302e;
+  --blaa2:#194d62d0;
+  --hvid:#fbf7ef;
+  --sort:#2f3131;
+  --shadow:#2f31312e;
 }
 
 /* Typografi */
@@ -65,11 +64,11 @@ main{
 }
 
 main a, footer a {
-    color: var(--orange);
+    color: var(--gul);
 }
 
 main a:hover, footer a:hover{
-    color: var(--gul);
+    color: var(--orange);
 }
 
 
