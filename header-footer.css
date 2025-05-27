@@ -2,7 +2,6 @@
 
 
 header{ /*indeholder nav og subheader*/ 
-    margin-top: -110px;
     position: sticky;
     top: 0;
     box-shadow: 0px 4px 4px var(--shadow);
@@ -13,8 +12,8 @@ header{ /*indeholder nav og subheader*/
 
 nav{ /*nav-links inkl logo*/
     display: flex;
-    padding: 0 40px;
-    height: 80px;
+    padding-inline: 2.5rem;
+    height: 5rem;
     justify-content: space-between;
     align-items: center; /*centrerer cta*/
     background-color:var(--hvid);
@@ -22,8 +21,8 @@ nav{ /*nav-links inkl logo*/
 
 nav a{
     display: flex;
-    height: 80px;
-    padding: 0 10px;
+    height: 5rem;
+    padding: 0 .5rem;
     align-items: center; /*centrerer top-nav*/
     justify-content: center;
     font-weight: 600;
@@ -38,7 +37,7 @@ nav a{
 }
 
 #logo img{
-    height: 50px;
+    height: 3rem;
 }
 
 
@@ -48,11 +47,11 @@ nav a{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 45px;
-    width: 180px;
-    margin-left: 10px;
+    height: 3rem;
+    width: 10rem;
+    margin-left: .5rem;
     background: linear-gradient(to right, var(--groen), var(--orange)) padding-box, linear-gradient(to left, var(--groen), var(--orange)) border-box;
-    border-radius: 50px;
+    border-radius: 10px;
     border: 2px solid transparent;
     box-shadow: inset 10px 0px 20px var(--orange), 0px 4px 4px var(--shadow);
 }
@@ -68,21 +67,21 @@ nav a{
     display: none;
 }
 
-header label{ 
+header #burger{ 
     display: none;
     font-size: 2rem;
     cursor: pointer;
 }
 
 /*subnav*/
-#nav-list{
+#nav-list-of-links{
     display: flex;
     align-items: center;
     justify-content: center;
 } 
 
 
-.subnav-list {
+.subnav-list-of-links{
     display: none;
     position: absolute;
     left: 0;
@@ -90,15 +89,15 @@ header label{
     background-color: var(--blaa);
     box-shadow: inset 0 1px 4px var(--shadow);
     width: 100%;
-    height: 80px;
+    height: 5rem;
     z-index: 1;
 }
 
-.subnav-list a {
-    line-height: 80px;
+.subnav-list-of-links a{
+    line-height: 5rem;
 }
 
-.subnav-list li:hover {
+.subnav-list-of-links li:hover{
     color: var(--gul);
     box-shadow: none;
 }
@@ -118,10 +117,10 @@ header label{
 
 /*Blå stribe under headeren. Indeholder "breadcrumbs", "Find os" og "Åbningstider" */
 #sub-header{
-    height: 30px;
+    height: 2rem;
     background-color: var(--blaa2);
     display: flex;
-    padding: 0 40px;
+    padding: 0 2.5rem;
     justify-content: space-between;
     align-items: center;
     color: var(--hvid);
@@ -131,10 +130,19 @@ header label{
   display: inline;
 }
 
-@media screen and (min-width:1025px){  
-.nav-item:hover .subnav-list {
+.nav-item:hover .subnav-list-of-links {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--hvid);
+}
+
+@media screen and (min-width:1025px){  
+.nav-item:hover .subnav-list-of-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     color: var(--hvid);
 }
@@ -145,7 +153,9 @@ header label{
     nav{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: end;
+        padding-inline: 0;
+
     }
     
     #logo-burger-container{
@@ -154,25 +164,42 @@ header label{
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        padding-inline: 2.5rem;
+
     }
 
-    header label{ 
+    header #burger{ 
         display: block;
     }
 
-    #nav-list{
+    #nav-list-of-links{
         display: none;
+        padding-inline: 2rem;
+        height: max-content;
+        max-height: calc(100svh - 5rem);
+        overflow-y: scroll;
     }
 
-    #toggle:checked ~ #nav-list{
+    #toggle:checked ~ #nav-list-of-links{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         background-color: var(--hvid);
-        width: 100vw;
-        min-height: 100vh;
-    } 
+        min-height: 100vh;}
+
+.subnav-list-of-links{
+    display: none;
+    position: static;
+    overflow: revert; /*nødvendig for at linjerne ikke bliver for høje, og går op i nav'en og forstyrrer flowet*/
+    box-shadow: inset 0 1px 4px var(--shadow);
+    width: 100%;
+    height: fit-content;
+    z-index: revert;
+}
+
+
+
 
     .responsive-subnav{
         display: flex;
@@ -187,11 +214,11 @@ header label{
         align-self: center;
     }
 
-    .subnav-list a {
-        line-height: 30;
+    .subnav-list-of-links a {
+        line-height: 2rem;
     }
 
-    #dansk-vinproduktion-toggle:checked + .subnav-list{
+    #dansk-vinproduktion-toggle:checked + .subnav-list-of-links{
         position: relative;
         display: flex;
         flex-direction: column;
