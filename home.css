@@ -2,15 +2,14 @@
 /* ....................forside................... */
 /* Hero */
 #hero-container {
-    width: 100vw; /* Fylder hele bredden af skærmen */
-    height: 90vh;
+    width: 100%; /* Fylder hele bredden af skærmen */
+    height: 80vh;
     overflow: hidden; /* Beskærer overskydende dele af videoen */
 }
 
 #hero-container img {
     width: 100vw; /* Fylder hele skærmbredden */
-    height: auto; /* Bevarer aspektforholdet */
-    height: 90vh;
+    height: 80vh;
     object-fit: cover; /* Beskærer video korrekt */
 }
 

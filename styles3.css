@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/*.................. RESET CSS............. */
+
+/* *{
+    border: 0.05rem solid lightgray;
+    border-collapse: collapse; 
+} */
+
+*{
+/* for easier box-styling*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* min body height */
+body {
+    min-height: 100vh;
+}
+
+/* responsive images/videos */
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+/* avoid ugly pre-styled links, lists and buttons*/
+li, a, button{
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+
+/*..................GENEREL STYLES.............*/
+
+/* Farver der genbruges mange steder kan bestemmes og ændres her*/
+:root{
+  --orange:#f6a902;
+  --gul:#fec912;
+  --groen:#a6be47;
+  --mango:linear-gradient(to right, var(--groen), var(--orange));
+  --blaa:#194d62;
+  --blaa2:25, 77, 98;
+  --hvid:#fdfdf5;
+  --sort:#303030;
+  --shadow:#3030302e;
+}
+
+/* Typografi */
+body{ font: 400 0.875rem/1.5 "Inter", sans-serif;}
+header{font: 400 0.75rem/1.5 "Inter", sans-serif; text-transform: uppercase;}
+h1{font: 400 3.5rem/1 "Lora", serif; text-transform: uppercase;}
+h2{font: 500 2rem/1.5 "Lora", serif; text-transform: uppercase;}
+h3{font: 700 1rem/1.5 "Lora", serif; padding: .5rem 0;}
+blockquote{font: italic 700 1rem/1.5 "Lora", serif;}
+figcaption{font: 800 0.75rem/1.5 "Inter", serif; letter-spacing: .2em;}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:var(--hvid); /* lys baggrund */
+}
+
+main{
+    margin:80px auto 0 auto;
+}
+
+main a, footer a {
+    color: var(--orange);
+}
+
+main a:hover, footer a:hover{
+    color: var(--gul);
+}
+
+
+/* sektionselementer/ "Byggeklodser" */
+.texture{
+    background-image:url(https://images.unsplash.com/photo-1601662528567-526cd06f6582?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.waves{
+    background-color: var(--hvid);
+    background-image: url(assets/green-waves.svg);
+}
+
+.full-width-background > *{
+    margin-inline: auto;
+    width: min(95%, 64rem /*1024*/);
+    padding-block: 1rem;
+}
+
+.flexbox{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+
+
+.flexbox > .tom-div{
+    flex: 1 1 0;
+}
+
+.double p{
+    max-width: 60ch; /*sikrer at tekst-felter ikke bliver for brede (60 tegn (0'er))*/
+    margin-inline-end: auto;
+}
+
+.single{
+    padding-block: 2rem 4rem; /*giver lidt white-space over og under omkring teksten*/ 
+    text-wrap: pretty; /*undgår at et enkelt ord bliver efterladt på en linje for sig selv - måske ikke alle browsere, der kender udtrykket*/
+}
+.single p{   
+    max-width: 72ch; /*sikrer at tekst-feltet ikke bliver for bredt (72 tegn (0'er))*/
+}
+
+@media screen and (min-width: 48rem /*768px*/) {
+.single{
+    text-align: center;
+}
+.single p{   
+    margin-inline: auto;
+}
+}
+
+
+.polaroid{
+  display: flex;
+  flex: 4 4 0;
+  flex-direction: column;
+  border: 1px solid var(--shadow);
+  background-color: var(--hvid);
+  box-shadow: 0 4px 4px 0 var(--shadow);
+  padding: 14px;
+  gap: 14px;
+  aspect-ratio: 4/5;
+}
+
+.polaroid img{
+  flex: 4 4 0;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--shadow);
+  object-fit: cover;
+}
+
+.polaroid figcaption{
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

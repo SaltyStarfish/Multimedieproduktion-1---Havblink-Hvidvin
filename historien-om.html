@@ -10,73 +10,73 @@
 </head>
 
 <body>
-    <header>
 <!-- top-navigation med dropdown menuer -->
+    <div id="top" style="height: 0;"></div> <!--Denne tomme div er det punkt,"til toppen"-linket skal scrolle til-->
+    <header>
         <nav>
             <div id="logo-burger-container">
                 <a id="logo" href="index.html" target="_self"><img src="assets/Havblink-logo-sort-fullsize.png" alt="HAVBLINK - Gå til forsiden."></a>
                 <label for="toggle">&#9776;</label>
             </div>
             <input type="checkbox" id="toggle">
-            <ul id="nav-list">
+            <menu id="nav-list">
                 <li class="nav-item">
                     <div class="responsive-subnav">
-                        <a href="#" target="_self">Dansk Vinpruduktion <span class="doed-pil">▽</span></a>
+                        <a href="#" target="_self">Dansk Vinpruduktion ▽</a>
                         <label for="dansk-vinproduktion-toggle">▽</label>
                     </div>
                     <input type="checkbox" id="dansk-vinproduktion-toggle">
-                    <ul class="subnav-list">
+                    <menu class="subnav-list">
                         <li><a href="#"> Hvorfor dyrke vin i Danmark?</a></li>
                         <li><a href="#"> Økoligi og bæredygtighed</a></li>
                         <li><a href="#"> Solaris - Nordens gyldne drue</a></li>
                         <li><a href="#"> Dansk vin på michelin restaurenter</a></li>
-                    </ul>
+                    </menu>
                 </li>
                 <li class="nav-item"><a href="#" target="_self">Udforsk vin ▽</a>
-                    <ul class="subnav-list">
+                    <menu class="subnav-list">
                         <li><a href="#"> Mest populære vine</a></li>
-                        <li><a href="vaelg-ret.html"> Vælg vin efter ret</a></li>
+                        <li><a href="vin-til-mad.html"> Vælg vin efter ret</a></li>
                         <li><a href="#"> Vælg vin efter smag</a></li>
                         <li><a href="#"> Se alle vores vine i webshoppen ↗</a></li>
-                    </ul>
+                    </menu>
                 </li>
                 <li class="nav-item"><a href="#" target="_self">Gaver ▽</a>
-                    <ul class="subnav-list">
+                    <menu class="subnav-list">
                         <li><a href="#"> Vælg efter budget</a></li>
                         <li><a href="#"> Mest populære gaver</a></li>
                         <li><a href="#"> Gavekurve</a></li>
                         <li><a href="#"> Gavekort</a></li>
-                    </ul>
+                    </menu>
                 </li>
                 <li class="nav-item"><a href="#" target="_self">Webshop</a></li>
                 <li class="nav-item"><a href="#" target="_self">Om Havblink ▽</a>
-                    <ul class="subnav-list">
-                        <li><a href="#"> Historien om Havblink</a></li>
+                    <menu class="subnav-list">
+                        <li><a href="historien-om.html"> Historien om Havblink</a></li>
                         <li><a href="#"> Bæredygtighed</a></li>
                         <li><a href="#"> Mød vinbønderne</a></li>
                         <li><a href="#"> Vores mission</a></li>
                         <li><a href="#"> Kontakt</a></li>
-                    </ul>
+                    </menu>
                 </li>
                 <li class="cta"><a href="" target="_self">Besøg Vingården</a></li>
-            </ul>
+            </menu>
         </nav>
 <!-- sub-header her = det blå stribe med breadcrums og adresse og åbningstider -->
         <div id="sub-header">
             <ul class="breadcrumb">
-                <!-- <li><a href="#">Home</a></li>
-                <li><a href="#">Udfork vin</a></li>
-                <li><a href="#">Vælg efter ret </a></li> -->
-                <li>Forside</li>
+                <li><a href="#">Home  /  </a></li>
+                <li><a href="#">Udfork vin  /  </a></li>
+                <li><a href="#">Vælg efter ret   /  </a></li>
+                <li>Velkommen</li>
             </ul>
             <ul class="info">
-                <li>Åbningstider</li>
-                <li>Find os</li>
+                <li style="display: inline;"><a href="#aabningstider">Åbningstider</a></li>
+                <li style="display: inline;"><a href="#adresse">Find os</a></li>
             </ul>
         </div>
-        
     </header>
-    <!-- .........................................................header slut................................. -->
+<!-- .........................................................header slut................................. -->
     <main>
         <div class="bgimg" id="bgimg-1"><h1>Historien om Havblink</h1></div>
         <div class="texture full-width-background">
@@ -90,32 +90,32 @@
         </div>
         <div class="bgimg" id="bgimg-2"></div>
         <div class="waves full-width-background">
-            <div class="flexbox">
-                <section>
+            <section class="polaroid-split-grid">
+                <div class="text">
                     <h2>Gården Havblink</h2>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nostrum tenetur eaque? Rem, nam quibusdam. Sed ducimus atque sunt minima labore, debitis nesciunt perferendis deleniti ut obcaecati? Quis, eligendi laudantium. <br><br>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus delectus ratione aspernatur quisquam tempora ipsa earum corporis repudiandae, voluptates impedit a maxime, magni perferendis. Est dignissimos suscipit fugiat obcaecati aliquid.
                     </p>
-                </section>
+                </div>
                 <figure class="polaroid">
                     <img src="https://images.unsplash.com/photo-1583056824818-d392c2de9518?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="vin">
                     <figcaption>Sukkergården Havblink i 1939</figcaption>
                 </figure>
-            </div>
-            <div class="flexbox">
+            </section>
+            <section class="polaroid-split-grid">
                 <figure class="polaroid">
                     <img src="https://images.unsplash.com/photo-1570286424693-a17f3dbf9f20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="vin">
                     <figcaption>Familien på gården (1939)</figcaption>
                 </figure>
-                <section>
+                <div class="text">
                     <h2>Generationer af sukkerroer</h2>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nostrum tenetur eaque? Rem, nam quibusdam. Sed ducimus atque sunt minima labore, debitis nesciunt perferendis deleniti ut obcaecati? Quis, eligendi laudantium. <br><br>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus delectus ratione aspernatur quisquam tempora ipsa earum corporis repudiandae, voluptates impedit a maxime, magni perferendis. Est dignissimos suscipit fugiat obcaecati aliquid.
                     </p>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
         <div class="bgimg" id="bgimg-3"></div>
         <div class="texture full-width-background">
@@ -129,45 +129,43 @@
         </div>
         <div class="bgimg" id="bgimg-4"></div>
         <div class="texture full-width-background">
-            <div class="single">
-                <section>
-                    <h2>Havblink genoplives</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, velit. Excepturi, cupiditate aliquid. Modi non impedit perspiciatis, a optio nihil rerum laudantium provident blanditiis. Sunt at provident libero eos sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita animi laboriosam eos iusto. Rerum, animi deserunt. Fugit voluptatibus voluptatem saepe hic, minus iusto id eveniet! Omnis culpa officiis numquam pariatur? <br><br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui omnis sapiente incidunt ducimus maxime eos suscipit odio aut! Quidem non ipsam nesciunt corporis temporibus quas adipisci libero ratione ex rem.
-                    </p>
-                </section>
-            </div>
+            <section class="single">
+                <h2>Havblink genoplives</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, velit. Excepturi, cupiditate aliquid. Modi non impedit perspiciatis, a optio nihil rerum laudantium provident blanditiis. Sunt at provident libero eos sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita animi laboriosam eos iusto. Rerum, animi deserunt. Fugit voluptatibus voluptatem saepe hic, minus iusto id eveniet! Omnis culpa officiis numquam pariatur? <br><br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui omnis sapiente incidunt ducimus maxime eos suscipit odio aut! Quidem non ipsam nesciunt corporis temporibus quas adipisci libero ratione ex rem.
+                </p>
+            </section>
         </div>
         <div class="bgimg" id="bgimg-5"></div>
         <div class="waves full-width-background">
-            <div class="flexbox">
-                <section>
+            <section class="polaroid-split-grid">
+                <div class="text">
                     <h2>Varme og kærlige hænder</h2>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nostrum tenetur eaque? Rem, nam quibusdam. Sed ducimus atque sunt minima labore, debitis nesciunt perferendis deleniti ut obcaecati? Quis, eligendi laudantium. <br><br>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus delectus ratione aspernatur quisquam tempora ipsa earum corporis repudiandae, voluptates impedit a maxime, magni perferendis. Est dignissimos suscipit fugiat obcaecati aliquid.
                     </p>
-                </section>
+                </div>
                 <figure class="polaroid">
                     <img src="https://images.unsplash.com/photo-1721245967679-b65e75835f2f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="vin">
                     <figcaption>Henriette og Bjørn genoptog livet på gården i 2010</figcaption>
                 </figure>
-            </div>
+            </section>
 
-            <div class="flexbox">
+            <section class="polaroid-split-grid">
                 <figure class="polaroid">
                     <img src="https://images.unsplash.com/photo-1710001582767-de1f6431c6a7?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="vin">
                     <figcaption>Vin- og frugtplantager på Havblink</figcaption>
                 </figure>
-                <section>
+                <div class="text">
                     <h2>Fra hobby til livsværk</h2>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nostrum tenetur eaque? Rem, nam quibusdam. Sed ducimus atque sunt minima labore, debitis nesciunt perferendis deleniti ut obcaecati? Quis, eligendi laudantium. <br><br>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus delectus ratione aspernatur quisquam tempora ipsa earum corporis repudiandae, voluptates impedit a maxime, magni perferendis. Est dignissimos suscipit fugiat obcaecati aliquid.
                     </p>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
         <div class="bgimg" id="bgimg-6"></div>
         <div class="texture full-width-background">
@@ -197,7 +195,7 @@
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui omnis sapiente incidunt ducimus maxime eos suscipit odio aut! Quidem non ipsam nesciunt corporis temporibus quas adipisci libero ratione ex rem.
                 </p>
             </section>
-            <div class="flexbox">
+            <section class="fitty-fitty">
                 <a href="https://www.instagram.com/" target="_blank">
                     <figure class="polaroid">
                         <img src="https://images.unsplash.com/photo-1721245968404-027869aa1b75?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="vin">
@@ -207,15 +205,17 @@
                 <a href="#">
                     <figure class="polaroid">
                         <img src="https://images.unsplash.com/photo-1600160797167-ca9dbf493c93?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="vin">
-                        <figcaption><h3>Besøg gården</h3> Book dit besøg, få en rundvisning og smag på vores skønne vine </figcaption>
+                        <figcaption><h3>Besøg os</h3> Book en rundvisning og smag vores skønne vine </figcaption>
                     </figure>
                 </a>
-            </div>
+            </section>
         </div>
     </main>
+<!-- .....................FOOTER................................. -->
     <footer class="full-width-background">
-        <div class="flexbox">
-            <section>
+        <a id="til-toppen" href="#top">Til toppen</a>
+        <section class="footer-grid">
+            <div id="aabningstider">
                 <h3>Åbningstider</h3>
                 <p>
                     Mandag: ..... 9.00 - 16.00 <br>
@@ -228,28 +228,32 @@
 
                     Ring eller <a href="#" target="_self">book</a> dit besøg <br>via hjemmesiden.
                 </p>
-                <br>
+            </div>
+            <div id="adresse">
+                <h3>Adresse</h3>
+                <p>
+                    Kystvejen 39 <br>
+                    1234 Sydfyn <br>
+                    Danmark <br>
+                </p><br>
+                <h3>Kontakt</h3>
+                <p>Tlf.: 39 39 39 39 <br>
+                Mail.: kontakt@havblink.dk</p>
+            </div>
+            <div id="some">
                 <h3>Følg med</h3>
                 <div id="some-container"> 
                     <a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook.svg" alt="Facebook"></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.svg" alt="Instagram"></a>
                     <a href="https://www.tripadvisor.dk/" target="_blank"><img src="assets/tripadvisor.svg" alt="Tripadvisor"></a>
                 </div>
-            </section>
-            <section>
-                <h3>Adresse</h3>
-                <p>
-                    Kystvejen 39 <br>
-                    1234 Sydfyn <br>
-                    Danmark <br>
-                </p><br><br>
-                <h3>Kontakt</h3>
-                <p>Tlf.: 39 39 39 39 <br>
-                Mail.: kontakt@havblink.dk</p>
-            </section>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191282.0071025764!2d10.51918382220324!3d55.094437935247676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464d35c3af03b073%3A0xc2e6af39fb8b989e!2sStrandvejen%2052-64%2C%205882%20Vejstrup!5e1!3m2!1sda!2sdk!4v1747863181191!5m2!1sda!2sdk" style="border: 2px solid var(--hvid);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </footer>
+            </div>
+            <div id="smiley-rapport">
+                <p>(C:) Smiley-rapport</p>
+            </div>
 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191282.0071025764!2d10.51918382220324!3d55.094437935247676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464d35c3af03b073%3A0xc2e6af39fb8b989e!2sStrandvejen%2052-64%2C%205882%20Vejstrup!5e1!3m2!1sda!2sdk!4v1747863181191!5m2!1sda!2sdk" style="border: 2px solid var(--hvid);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </footer>
 </body>
 </html>
