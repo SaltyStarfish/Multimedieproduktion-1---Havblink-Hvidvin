@@ -2,99 +2,228 @@
 
 
 header{ /*indeholder nav og subheader*/ 
-    position: sticky;
+    position: sticky; /*bliver siddende i toppen*/
     top: 0;
     box-shadow: 0px 4px 4px var(--shadow);
     font-size: .75rem;
-    text-transform: uppercase;
-
+    text-transform: uppercase; /*automatisk blokbogstaver*/
 }
 
-nav{ /*nav-links inkl logo*/
+nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
     display: flex;
-    padding-inline: 2.5rem;
-    height: 5rem;
-    justify-content: space-between;
-    align-items: center; /*centrerer cta*/
+    flex-direction: column;
+    align-items: end;
+    gap: 1.5rem;
+    padding-inline: 2.5%; /*lidt mellemrum til kanten af skærmen*/
+    /* height: 5rem; */
+    /*align-items: center;*/ /*centrerer cta-container*/
     background-color:var(--hvid);
+    font-weight: 600;
 }
 
-nav a{
+nav #burger-toggle{
+    display: none; /*toggle skal aldrig vises. Viser i stedet burger-label*/ 
+    max-width: 90vh;
+}
+
+#logo-burger-container{  /*aka det man ser i mobil-view*/
+    width: 100%;
     display: flex;
-    height: 5rem;
-    padding: 0 .5rem;
-    align-items: center; /*centrerer top-nav*/
+    justify-content: space-between; /*logo og burger til hver sin side*/
+    align-items: center; /*centrerer indhold vertikalt*/
+    /* padding-inline: 2.5rem; */
+}
+header #logo img{
+    height: 3.5rem;
+}
+#burger{
+    font-size: 2.5rem;
+    cursor: pointer;/*indikerer, at man kan klikke på den*/
+    font-weight: 500;
+}
+
+
+#nav-list-of-links{ /*"samling af midterste menupunkter, som også er dropdowns, samlet i en kasse for at kunne holde dem samlet ved brug af space-between i horisontal top-nav*/
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: end; /*højre-stillet navigation i mobil-view*/
+    height: max-content;
+    /* max-height: calc(100svh - 5rem); */
+}
+
+.nav-item{ /*almene menupunkter med dropdowns*/
+    display: flex;
+    flex-direction: column;
+    align-items: end; /*højre-stillet navigation i mobil-view*/
+}
+
+/*Call-to-action -knapper: Webshop og Besøg Havglimt*/
+.box-of-ctas{ /*kasse til at holde knapperne samlet*/
+    display: flex;
+    flex-direction: column; /*stablet oven på hinanden i mobil-view*/
+    gap: .5rem;
+    margin-block-end: 1.5rem; /*nederste element i vertikal navigation - derfor lidt margin i bunden*/
+}
+
+.cta-container{/*styling af CTA'er */
+    display: flex;
+    align-items: center;/*holder teksten i midten af knappen*/
     justify-content: center;
-    font-weight: 600;
-    white-space: nowrap; /*ungår line-breaks*/
+    height: 3rem;
+    width: 10rem;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px var(--shadow);
+    transition: all 0.1s ease-in-out 0.1s;
+}
+#header-besoeg{
+    /*2x background med forskellige størrelser, giver mulighed for at lave gradient-border*/
+    background: linear-gradient(to right, var(--groen), var(--orange)) padding-box, linear-gradient(to left, var(--groen), var(--orange)) border-box;
+    border: 2px solid transparent; /*transparent border er en slags place-holder for gradient-border ovenfor*/
+    box-shadow: inset 10px 0px 20px var(--orange), 0px 4px 4px var(--shadow);
+}
+
+#header-webshop{
+    background: var(--blaa);
+    border: 2px solid var(--shadow); 
+    border-radius: 4px;
+    color: var(--hvid);
+}
+
+#header-besoeg:hover{
+    box-shadow: inset -10px 0px 20px var(--groen), 0px 2px 2px var(--shadow);
+    color: var(--sort);
+}
+
+#header-webshop:hover{
+    box-shadow: 0px 2px 2px var(--shadow);
+    color: var(--hvid);
+}
+
+#nav-list-of-links, .box-of-ctas{/*skjuler menuen indtil burger-toggle er checked*/
+    display:none;
 }
 
 /* Hover-effekter på links m*/
 .active, nav li:hover{
     color: var(--orange);
     transition: all 0.1s ease 0.1s;
+}
+
+/* .subnav-list-of-links li:hover{
+    color: var(--orange);
+    box-shadow: none;
+} */
+
+/*burger-funktionen - checkboxen kan selecte, menu indholdet, fordi de er søskende*/
+#burger-toggle:checked ~ #nav-list-of-links, 
+#burger-toggle:checked ~ .box-of-ctas{
+    display: flex;
+}
+
+/*Sub-navigation - Åbner og lukker ved tryk på checkbox-pil*/
+#dansk-vinproduktion-toggle, 
+#vin-guide-toggle, 
+#gaver-toggle, 
+#om-havblink-toggle{
+    display: none;
+}
+
+.inline-label{/*Holder tekst og label på samme linje - de hopper på hver sin linje, hvis de ikke er i en kasse. + Styling*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+.nav-item label{/*pil - label for checkbox*/
+    font-size: 1rem;
+    padding: .5rem .5rem;
+}
+.doed-pil{ /*pil brugt i laptop-view, som ikke har nogen funktion, men blot indikerer at der er en dropdown - Derfor skjult i mobil-view*/
+    display: none;
+}
+
+.subnav-list-of-links{
+    display: none;/*vises ikke før checkbox-pil er checked*/
+    /* height: fit-content; */
+    align-items: end;
+    }
+
+.subnav-list-of-links a {
+    line-height: 3rem;
+}
+
+/*hver checkbox åbner sin undermenu via sibling-combinator (~)*/
+#dansk-vinproduktion-toggle:checked ~ .subnav-list-of-links, 
+#vin-guide-toggle:checked ~ .subnav-list-of-links, 
+#gaver-toggle:checked ~ .subnav-list-of-links, 
+#om-havblink-toggle:checked ~ .subnav-list-of-links{
+    display: flex;
+    flex-direction: column;
+}
+
+/*roterer pil via next-sibling-combinator og derefter descendant combinator(+)*/
+#dansk-vinproduktion-toggle:checked + div label, 
+#vin-guide-toggle:checked + div label, 
+#gaver-toggle:checked + div label, 
+#om-havblink-toggle:checked + div label{
+    transform: rotate(90deg);
+}
+
+
+/*............horisontal nav.........*/
+@media screen and (min-width:64em){
+nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
+    flex-direction: row;/*for horisontal nav-bar*/
+    padding-block-end: revert;
+    /* height: 5rem; */
+    justify-content: space-between; /*giver mellemrum mellem logo, dropdowns og CTAer*/
+    align-items: center;
+    gap: revert;
+}
+    /* height: 5rem; */
+    /*align-items: center;*/ /*centrerer cta-container*/
+
+#nav-list-of-links{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+} 
+
+#logo-burger-container{
+    display: contents; /*sørger for at boxens indhold vises (logoet), men padding osv skjules - smart fordi man ellers skulle til at nulstille padding igen i laptop-view*/ 
+}
+
+#burger{ 
+    display: none;
+}
+
+.nav-item{
+    display: flex;
+}
+
+.nav-item a{
+    display: flex;
+    height: 5rem;
+    align-items: center; /*centrerer top-nav*/
+    white-space: nowrap; /*ungår line-breaks*/
+}
+
+.nav-item label{
+    display: none;
+}
+
+/* Hover-effekter på links m*/
+.active, nav li:hover{
+    transition: all 0.1s ease 0.1s;
     box-shadow: inset 0 -4px 0 var(--orange);
 }
 
-#logo img{
-    height: 3rem;
-}
-
-
-
-/*Call-to-action -knap: Besøg Havglimt*/
-.cta{
+.nav-item:hover .subnav-list-of-links {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    width: 10rem;
-    margin-left: .5rem;
-    background: linear-gradient(to right, var(--groen), var(--orange)) padding-box, linear-gradient(to left, var(--groen), var(--orange)) border-box;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    box-shadow: inset 10px 0px 20px var(--orange), 0px 4px 4px var(--shadow);
-}
 
-.cta:hover{
-    transition: all 0.1s ease-in-out 0.1s;
-    box-shadow: inset -10px 0px 20px var(--groen), 0px 4px 4px var(--shadow);
-    color: initial;
-}
-
-/*Burger*/
-#toggle{
-    display: none;
-}
-
-header #burger{ 
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-/*subnav*/
-#nav-list-of-links{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} 
-
-
-.subnav-list-of-links{
-    display: none;
-    position: absolute;
-    left: 0;
-    overflow: hidden; /*nødvendig for at linjerne ikke bliver for høje, og går op i nav'en og forstyrrer floet*/
-    background-color: var(--blaa);
-    box-shadow: inset 0 1px 4px var(--shadow);
-    width: 100%;
-    height: 5rem;
-    z-index: 1;
-}
-
-.subnav-list-of-links a{
-    line-height: 5rem;
+    color: var(--hvid);
 }
 
 .subnav-list-of-links li:hover{
@@ -102,128 +231,70 @@ header #burger{
     box-shadow: none;
 }
 
-
-.nav-item label{
-    display: none;
+.box-of-ctas{
+    display: flex;
+    flex-direction: row;
+    margin-block-end:0; 
 }
 
-#dansk-vinproduktion-toggle{
-    display: none;
+#header-webshop{
+    width: 6rem;
 }
+
+/*subnav*/
+.subnav-list-of-links{
+    display: none;
+    position: absolute; /*absolute bruges her for selv at kunne bestemme form og placering af elementet - så det kan rykke ned på en ny linje og fylde hele bredden, selvom den er "barn" af et mindre element*/
+    top: 5rem;
+    left: 0;
+    overflow: hidden; /*nødvendig for at linjerne ikke bliver for høje, og går op i nav'en og forstyrrer floet*/
+    background-color: var(--blaa);
+    box-shadow: inset 0 1px 4px var(--shadow);/*indre skygge, så det ligner at den er under headeren*/
+    width: 100%;
+    height: 5rem;
+    z-index: 1;
+
+}
+
+/* .subnav-list-of-links a{
+    line-height: 5rem;
+} */
 
 .doed-pil{
-    padding: 4px;
+    display: inline;/*død pil vises i horisontal nav, for at indikere at det er en dropdown*/
+    padding: .25rem;
 }
 
-/*Blå stribe under headeren. Indeholder "breadcrumbs", "Find os" og "Åbningstider" */
-#sub-header{
-    height: 2rem;
-    background-color: var(--blaa2);
-    display: flex;
-    padding: 0 2.5rem;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--hvid);
-}
-
-.breadcrumb li {
-  display: inline;
-}
-
-.nav-item:hover .subnav-list-of-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--hvid);
-}
-
-@media screen and (min-width:1025px){  
 .nav-item:hover .subnav-list-of-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
+    color: var(--hvid);}
+}  
+
+/*................Sub-header/banner................
+Blå stribe under headeren. Indeholder "Tilbage", "Find os" og "Åbningstider" */
+#sub-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    background-color: var(--blaa2);
+    padding: 0 2.5%;
     color: var(--hvid);
 }
+
+#sub-header a:hover{
+  color: var(--gul);
 }
 
-/* mobil-visning */
-@media screen and (max-width:1024px){
-    nav{
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        padding-inline: 0;
-
-    }
-    
-    #logo-burger-container{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        padding-inline: 2.5rem;
-
-    }
-
-    header #burger{ 
-        display: block;
-    }
-
-    #nav-list-of-links{
-        display: none;
-        padding-inline: 2rem;
-        height: max-content;
-        max-height: calc(100svh - 5rem);
-        overflow-y: scroll;
-    }
-
-    #toggle:checked ~ #nav-list-of-links{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        background-color: var(--hvid);
-        min-height: 100vh;}
-
-.subnav-list-of-links{
-    display: none;
-    position: static;
-    overflow: revert; /*nødvendig for at linjerne ikke bliver for høje, og går op i nav'en og forstyrrer flowet*/
-    box-shadow: inset 0 1px 4px var(--shadow);
-    width: 100%;
-    height: fit-content;
-    z-index: revert;
+.info{
+    display: flex;
+    gap: 1.5rem;
 }
 
-
-
-
-    .responsive-subnav{
-        display: flex;
-    }
-
-    .doed-pil{
-        display: none;
-    }
-    .subnav label{
-        display: flex;
-        font-size: .8rem;
-        align-self: center;
-    }
-
-    .subnav-list-of-links a {
-        line-height: 2rem;
-    }
-
-    #dansk-vinproduktion-toggle:checked + .subnav-list-of-links{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-}
 /*.....................Footer..................*/
 footer{
     background-color: var(--blaa);
