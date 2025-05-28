@@ -4,9 +4,9 @@
     overflow-x: scroll;
     overflow-y: hidden;
     padding: 1rem;
+    box-shadow: inset 4px 0 var(--shadow), inset -4px 0 var(--shadow);
     -ms-overflow-style: none;  /*Hide scrollbar for IE and Edge */
     scrollbar-width: none;  /*Hide scrollbar for Firefox */
-    box-shadow: inset 4px 0 var(--shadow), inset -4px 0 var(--shadow);
 }
 
 .hjul-container::-webkit-scrollbar {/* Hide scrollbar for Chrome, Safari and Opera */

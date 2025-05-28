@@ -7,6 +7,14 @@ header{ /*indeholder nav og subheader*/
     box-shadow: 0px 4px 4px var(--shadow);
     font-size: .75rem;
     text-transform: uppercase; /*automatisk blokbogstaver*/
+    z-index: 5;
+    max-height: min(100svh, 100dvh, 100vh); /*for at headeren ikke kommer til at blive højere end selve skærmen, men at man i stedet kan scrolle, hvis man har fået åbnet for mange undermenuer på én gang*/
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /*Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /*Hide scrollbar for Firefox */
+}
+header::-webkit-scrollbar {/* Hide scrollbar for Chrome, Safari and Opera */
+    display:none;
 }
 
 nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
@@ -15,15 +23,12 @@ nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
     align-items: end;
     gap: 1.5rem;
     padding-inline: 2.5%; /*lidt mellemrum til kanten af skærmen*/
-    /* height: 5rem; */
-    /*align-items: center;*/ /*centrerer cta-container*/
     background-color:var(--hvid);
     font-weight: 600;
 }
 
-nav #burger-toggle{
+#burger-toggle{
     display: none; /*toggle skal aldrig vises. Viser i stedet burger-label*/ 
-    max-width: 90vh;
 }
 
 #logo-burger-container{  /*aka det man ser i mobil-view*/
@@ -31,7 +36,7 @@ nav #burger-toggle{
     display: flex;
     justify-content: space-between; /*logo og burger til hver sin side*/
     align-items: center; /*centrerer indhold vertikalt*/
-    /* padding-inline: 2.5rem; */
+    height: 5rem;
 }
 header #logo img{
     height: 3.5rem;
@@ -49,7 +54,6 @@ header #logo img{
     gap: 1.5rem;
     align-items: end; /*højre-stillet navigation i mobil-view*/
     height: max-content;
-    /* max-height: calc(100svh - 5rem); */
 }
 
 .nav-item{ /*almene menupunkter med dropdowns*/
@@ -74,51 +78,61 @@ header #logo img{
     width: 10rem;
     border-radius: 4px;
     box-shadow: 0px 4px 4px var(--shadow);
-    transition: all 0.1s ease-in-out 0.1s;
 }
 #header-besoeg{
     /*2x background med forskellige størrelser, giver mulighed for at lave gradient-border*/
     background: linear-gradient(to right, var(--groen), var(--orange)) padding-box, linear-gradient(to left, var(--groen), var(--orange)) border-box;
     border: 2px solid transparent; /*transparent border er en slags place-holder for gradient-border ovenfor*/
-    box-shadow: inset 10px 0px 20px var(--orange), 0px 4px 4px var(--shadow);
+    box-shadow: inset 10px 0px 20px var(--orange),  var(--shadow);
+    color: var(--sort);
+    text-shadow: 0px 0px 4px var(--gul);
+    transition: all 0.1s ease-in-out 0.1s;
 }
 
 #header-webshop{
-    background: var(--blaa);
-    border: 2px solid var(--shadow); 
+    background: transparent;
+    border: 2px solid var(--blaa); 
     border-radius: 4px;
-    color: var(--hvid);
+    color: var(--blaa);
+    transition: box-shadow 0.1s ease-in-out 0.1s;
 }
 
 #header-besoeg:hover{
-    box-shadow: inset -10px 0px 20px var(--groen), 0px 2px 2px var(--shadow);
+    box-shadow: inset -10px 0px 20px var(--groen), 0px 2px 2px var(--shadow), inset 0px 2px 2px var(--shadow);
     color: var(--sort);
 }
 
 #header-webshop:hover{
-    box-shadow: 0px 2px 2px var(--shadow);
-    color: var(--hvid);
+    box-shadow: inset 0px 2px 2px var(--shadow);
+    color: var(--sort);
 }
 
 #nav-list-of-links, .box-of-ctas{/*skjuler menuen indtil burger-toggle er checked*/
     display:none;
 }
 
-/* Hover-effekter på links m*/
-.active, nav li:hover{
+.subnav-list-of-links a:hover{
     color: var(--orange);
-    transition: all 0.1s ease 0.1s;
 }
 
-/* .subnav-list-of-links li:hover{
-    color: var(--orange);
-    box-shadow: none;
-} */
-
 /*burger-funktionen - checkboxen kan selecte, menu indholdet, fordi de er søskende*/
-#burger-toggle:checked ~ #nav-list-of-links, 
-#burger-toggle:checked ~ .box-of-ctas{
+#burger-toggle:checked +header #nav-list-of-links, 
+#burger-toggle:checked +header .box-of-ctas{
     display: flex;
+}
+
+#overlay{
+    display: none;
+}
+
+#burger-toggle:checked ~ #overlay{ /*gør at mobil-menuen lukkes, når der klikkes udenfor*/ 
+    display: block; /*for at det kan fylde hele bredden og højde, da det normalt er et inline-element*/
+    position: fixed; 
+    z-index: 2;/*over main, men under headeren*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 /*Sub-navigation - Åbner og lukker ved tryk på checkbox-pil*/
@@ -138,7 +152,12 @@ header #logo img{
 
 .nav-item label{/*pil - label for checkbox*/
     font-size: 1rem;
-    padding: .5rem .5rem;
+    padding: .15rem .5rem;
+    border-radius: 4px;
+    background-color: var(--shadow);
+    color: var(--blaa);
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out 0.1s;
 }
 .doed-pil{ /*pil brugt i laptop-view, som ikke har nogen funktion, men blot indikerer at der er en dropdown - Derfor skjult i mobil-view*/
     display: none;
@@ -168,12 +187,17 @@ header #logo img{
 #vin-guide-toggle:checked + div label, 
 #gaver-toggle:checked + div label, 
 #om-havblink-toggle:checked + div label{
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 
 
 /*............horisontal nav.........*/
 @media screen and (min-width:64em){
+header{
+    max-height: revert;
+    overflow-y: revert;
+}
+
 nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
     flex-direction: row;/*for horisontal nav-bar*/
     padding-block-end: revert;
@@ -182,13 +206,11 @@ nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
     align-items: center;
     gap: revert;
 }
-    /* height: 5rem; */
-    /*align-items: center;*/ /*centrerer cta-container*/
 
 #nav-list-of-links{
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
+    gap: 0; /*gap er her erstattet af padding*/
 } 
 
 #logo-burger-container{
@@ -201,6 +223,7 @@ nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
 
 .nav-item{
     display: flex;
+    padding-inline: .75rem; /*padding på de enkelte elementer her i stedet for gap, for at linjen under linket kan brede sig mere, og så man går direkte fra en hover effekt til den næste, og ungår "huller" i flowet*/
 }
 
 .nav-item a{
@@ -214,21 +237,18 @@ nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
     display: none;
 }
 
+.subnav-list-of-links a:hover{
+    color: var(--gul);
+}
+
 /* Hover-effekter på links m*/
 .active, nav li:hover{
     transition: all 0.1s ease 0.1s;
     box-shadow: inset 0 -4px 0 var(--orange);
 }
 
-.nav-item:hover .subnav-list-of-links {
+.nav-item:hover .subnav-list-of-links {/*submenuer vises horisontalt*/
     display: flex;
-
-    color: var(--hvid);
-}
-
-.subnav-list-of-links li:hover{
-    color: var(--gul);
-    box-shadow: none;
 }
 
 .box-of-ctas{
@@ -244,16 +264,31 @@ nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
 /*subnav*/
 .subnav-list-of-links{
     display: none;
-    position: absolute; /*absolute bruges her for selv at kunne bestemme form og placering af elementet - så det kan rykke ned på en ny linje og fylde hele bredden, selvom den er "barn" af et mindre element*/
-    top: 5rem;
+    position: absolute; /*absolute bruges her for selv at kunne bestemme form og placering af elementet - Hopper selv ned på ny linje, pga display:block, men position absolute gør at den kan fylde hele bredden, selvom den er "barn" af et mindre element*/
     left: 0;
     overflow: hidden; /*nødvendig for at linjerne ikke bliver for høje, og går op i nav'en og forstyrrer floet*/
     background-color: var(--blaa);
     box-shadow: inset 0 1px 4px var(--shadow);/*indre skygge, så det ligner at den er under headeren*/
     width: 100%;
     height: 5rem;
-    z-index: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--hvid);    
+}
 
+.nav-item:hover{
+    display: block;
+}  
+
+.nav-item:hover .subnav-list-of-links {
+    display: flex;
+}  
+
+.subnav-list-of-links li:hover{
+    color: var(--gul);
+    box-shadow: none;
 }
 
 /* .subnav-list-of-links a{
@@ -264,18 +299,9 @@ nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
     display: inline;/*død pil vises i horisontal nav, for at indikere at det er en dropdown*/
     padding: .25rem;
 }
+}
 
-.nav-item:hover .subnav-list-of-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    color: var(--hvid);}
-}  
-
-/*................Sub-header/banner................
-Blå stribe under headeren. Indeholder "Tilbage", "Find os" og "Åbningstider" */
+/*................Sub-header/banner.............Blå stribe under headeren. Indeholder "Tilbage", "Find os" og "Åbningstider" */
 #sub-header{
     display: flex;
     justify-content: space-between;
@@ -295,7 +321,7 @@ Blå stribe under headeren. Indeholder "Tilbage", "Find os" og "Åbningstider" *
     gap: 1.5rem;
 }
 
-/*.....................Footer..................*/
+/*....................................................Footer.....................................................*/
 footer{
     background-color: var(--blaa);
     color: var(--hvid);
