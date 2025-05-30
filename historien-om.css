@@ -8,12 +8,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 80vh;
+    height: min(80vh, 700px);
 
 }
 #bgimg-1 {
-    background-image: url(https://images.unsplash.com/photo-1602967217650-b8b1d1343609?q=80&w=2027&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    min-height: 90vh;
+    background-image: url(images/vin-ranker-med-ovenlys.jpg);
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,11 +26,11 @@
 }
 
 #bgimg-2 {
-    background-image: url(https://images.unsplash.com/photo-1472352327492-9765783b74e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/gyldne-druer-i-massevis.jpg);
 }
 
 #bgimg-3 {
-    background-image: url(https://plus.unsplash.com/premium_photo-1726072362679-2b2023862024?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/sukkerroe.jpg);
 }
 
 #bgimg-4 {
@@ -38,7 +38,7 @@
 }
 
 #bgimg-5 {
-    background-image: url(https://plus.unsplash.com/premium_photo-1720539180341-f00762823a88?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/vinskud-i-solopgang.jpg);
 }
 
 #bgimg-6 {
@@ -63,9 +63,7 @@
 }
 
 @media screen and (min-width: 48em /*768px*/) {
-.single{
-    text-align: center;
-}
+
 .single p{   
     margin-inline: auto;
 }

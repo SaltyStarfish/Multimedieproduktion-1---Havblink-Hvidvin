@@ -40,7 +40,7 @@
                 <li class="nav-item">
                     <input type="checkbox" id="vin-guide-toggle">
                     <div class="inline-label">
-                        <a href="#" target="_self">
+                        <a class="active" href="#" target="_self">
                             Vin-Guide <span class="doed-pil">▽</span>
                         </a>
                         <label for="vin-guide-toggle">▼</label>
@@ -92,10 +92,10 @@
                     </div>
                 </div>
             </nav>
-<!-- sub-header her = det blå stribe med breadcrums og adresse og åbningstider -->
+<!-- sub-header her = det blå stribe med Velkommen/↩ Tilbage og adresse og åbningstider -->
         <div id="sub-header">
             <p class="tilbage">
-                Velkommen /<a href="index.html" target="_self"> ↩  Tilbage</a>
+                <a href="index.html" target="_self"> ↩  Tilbage</a>
             </p>
             <ul class="info">
                 <li style="display: inline;"><a href="#aabningstider">Åbningstider</a></li>
@@ -112,11 +112,16 @@
         <section class="vin-til-mad-section">
             <div class="text">
                 <h2>Vin-guide:</h2>
-                <h1>Vin til mad</h1>
-                <p>Du behøver ikke være vinekspert for at vælge den helt rigtige vin. Man kommer langt med ærlige anmeldelser og gode råd, der er til at forstå. 
-                    <br><br>
+                <h1 class="gap-top-xs gap-bottom-m">Vin til mad</h1>
+                <h3 class="gap-bottom-xs">Find den helt rigtige vin</h3>
+                <p>
+                    Du behøver ikke være vinekspert for at vælge den helt rigtige vin. Man kommer langt med ærlige anmeldelser og gode råd, der er til at forstå.
+                </p>
+                <p class="gap-top-xl">
                     Vælg den type mad, vinen skal passe til, så hjælper vi dig videre med konkrete og kvalificerede vin-anbefalinger.
-                    <br><br>
+                </p>
+                <p class="gap-top-xl">
+                    Bon appétit!
                 </p>
             </div>
             <div class="hjul-container">
@@ -178,24 +183,40 @@
     </div>
     <div class="full-width-background texture">
         <section class="single">
-            <h2>Hvorfor vælge dansk vin?</h2>
-            <br>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nostrum tenetur eaque? Rem, nam quibusdam. Sed ducimus atque sunt minima labore, debitis nesciunt perferendis deleniti ut obcaecati? Quis, eligendi laudantium.</p>
-            <br>
-            <h3>Bæredygtighed</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nostrum tenetur eaque? Rem, nam quibusdam. Sed ducimus atque sunt minima labore, debitis nesciunt perferendis deleniti ut obcaecati? Quis, eligendi laudantium.</p>
-            <br>
-            <h3>Kvaliteten følger med</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure atque ducimus, hic voluptatibus voluptate quod mollitia dolor fugit consequuntur alias esse dolorem eligendi aliquam? Numquam quia neque voluptas asperiores est?</p>
+            <h2 class="gap-bottom-m">Hvorfor vælge dansk vin?</h2>
+            <h3 class="gap-bottom-xs">Smagen</h3>
+            <p>
+                Dansk vin er ikke længere den usle hjemmebryg, som det engang havde ry for at være. De danske vinbønder er nået rigtig langt på området med at dyrke vin i Danmarks kølige klima. Og resultatet er vine, som ikke blot er produceret lokalt, men også smager fremragende. 
+            </p>
+            <p class="gap-top-xs">
+                Vidste du fx at der serveres dansk vin på flere Michelin-restauranter rundt om i verden?
+            </p>
+            <h3 class="gap-top-l gap-bottom-xs">Bæredygtighed</h3>
+            <p>
+                Vin fra Havblink Hvidvin produceres økologisk og med stor respekt for naturen. 
+            </p>
+            <p class="gap-top-xs">
+                Al arbejde med vinstokkende gøres i hånden, for at opnå bedst kvalitet og mindst spild, og for at give plads og ro til dyrelivet i nærområdet. 
+            </p>
+            <p class="gap-top-xs">
+                Der bruges naturligvis ikke sprøjtemidler, og alle delprocesser foregår på stedet for at mindske unødig CO2 udledning i forbindelse med tranport af vinen.
+            </p>
+            <h3 class="gap-top-l gap-bottom-xs">Kvalitet og pris går hånd i hånd</h3>
+            <p>
+                “Men er det ikke alt for dyrt?“ spørger du måske. Det er ingen hemmelighed, at de fleste danskproducerede vine hverken ligger i den dyreste eller den allerbilligste ende af prisskalaen. 
+            </p>
+            <p class="gap-top-xs">
+                Det skyldes alt det arbejde, der er lagt i hver enkelt vin lige fra plantens opvækst og udvælgelse af de bedste druer til gæring og tapning på flaske. Alt sammen efter bæredygtige metoder. Og når du køber dansk vin i Danmark, kan du vide dig sikker på, at pengene er brugt på vinproduktion i høj kvalitet og ikke på at transportere vinen fra fjerne lande.
+            </p>
         </section>
     </div>
 </main>
 <!-- .....................FOOTER................................. -->
     <footer class="full-width-background">
-        <a id="til-toppen" href="#top">Til toppen</a>
+        <a id="til-toppen" href="#top"  class="gap-bottom-m">Til toppen</a>
         <section class="footer-grid">
             <div id="aabningstider">
-                <h3>Åbningstider</h3>
+                <h3 class="gap-bottom-xs">Åbningstider</h3>
                 <p>
                     Mandag: ..... 9.00 - 16.00 <br>
                     Tirsdag: ...... 9.00 - 16.00 <br>
@@ -203,24 +224,25 @@
                     Torsdag: ..... 9.00 -  17.00 <br>
                     Fredag: ...... 9.00 - 20.00 <br>
                     Lørdag: ...... 9.00 - 20.00 <br>
-                    Søndag: ..... 9.00 - 20.00 <br><br>
-
+                    Søndag: ..... 9.00 - 20.00 
+                </p>
+                <p class="gap-top-m">
                     Ring eller <a href="#" target="_self">book</a> dit besøg <br>via hjemmesiden.
                 </p>
             </div>
             <div id="adresse">
-                <h3>Adresse</h3>
+                <h3 class="gap-bottom-xs">Adresse</h3>
                 <p>
                     Kystvejen 39 <br>
                     1234 Sydfyn <br>
-                    Danmark <br>
-                </p><br>
-                <h3>Kontakt</h3>
+                    Danmark
+                </p>
+                <h3 class="gap-top-l gap-bottom-xs">Kontakt</h3>
                 <p>Tlf.: 39 39 39 39 <br>
                 Mail.: kontakt@havblink.dk</p>
             </div>
             <div id="some">
-                <h3>Følg med</h3>
+                <h3 class="gap-bottom-m">Følg med</h3>
                 <div id="some-container"> 
                     <a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook.svg" alt="Facebook"></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.svg" alt="Instagram"></a>

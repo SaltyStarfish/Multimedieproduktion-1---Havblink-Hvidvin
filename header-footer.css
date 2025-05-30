@@ -83,9 +83,8 @@ header #logo img{
     /*2x background med forskellige størrelser, giver mulighed for at lave gradient-border*/
     background: linear-gradient(to right, var(--groen), var(--orange)) padding-box, linear-gradient(to left, var(--groen), var(--orange)) border-box;
     border: 2px solid transparent; /*transparent border er en slags place-holder for gradient-border ovenfor*/
-    box-shadow: inset 10px 0px 20px var(--orange),  var(--shadow);
-    color: var(--sort);
-    text-shadow: 0px 0px 4px var(--gul);
+    box-shadow: /*inset 10px 0px 20px var(--orange),*/ 0px 4px 4px var(--shadow);
+    color: #111111;
     transition: all 0.1s ease-in-out 0.1s;
 }
 
@@ -299,6 +298,10 @@ nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
     display: inline;/*død pil vises i horisontal nav, for at indikere at det er en dropdown*/
     padding: .25rem;
 }
+
+.sub-nav-pil{
+    display:none;
+}
 }
 
 /*................Sub-header/banner.............Blå stribe under headeren. Indeholder "Tilbage", "Find os" og "Åbningstider" */
@@ -364,7 +367,7 @@ footer iframe{
         gap: 1.5rem;
     }
 
-    footer #aabningstider, footer #adresse, footer #some, footer #smiliey-rapport{
+    footer #aabningstider, footer #adresse, footer #some, footer #smiley-rapport{
         grid-column: span 4;
     }
 
@@ -382,7 +385,7 @@ footer iframe{
         gap: 1.5rem;
     }
 
-    footer #aabningstider, footer #adresse, footer #some, footer #smiliey-rapport{
+    footer #aabningstider, footer #adresse, footer #some, footer #smiley-rapport{
         grid-column: span 4;
     }
 

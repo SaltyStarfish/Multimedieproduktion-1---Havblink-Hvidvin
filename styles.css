@@ -46,10 +46,25 @@ body{ font: 400 0.875rem/1.5 "Inter", sans-serif;}
 header{font: 400 0.75rem/1.5 "Inter", sans-serif; text-transform: uppercase;}
 h1{font: 400 3rem/1 "Lora", serif; text-transform: uppercase;}
 @media screen and (min-width: 48em /*768px*/){h1{font:  400 3.5rem/1 "Lora", serif;}}
-h2{font: 500 2rem/1.5 "Lora", serif; text-transform: uppercase;}
-h3{font: 700 1rem/1.5 "Lora", serif; padding: .5rem 0;}
+h2{font: 500 2rem/1.2 "Lora", serif; text-transform: uppercase;}
+h3{font: 700 1rem/1.2 "Lora", serif; /*padding-block: .5rem;*/}
 blockquote{font: italic 700 1rem/1.5 "Lora", serif;}
 figcaption{font: 800 0.75rem/1.5 "Inter", serif; letter-spacing: .2em;}
+
+/*Line-spacing --- Skala fra ChainLift.io*/
+.gap-bottom-xs{margin-bottom: 0.128em}
+.gap-bottom-s{margin-bottom: 0.272em}
+.gap-bottom-m{margin-bottom: 0.618em}
+.gap-bottom-l{margin-bottom: 1em}
+.gap-bottom-xl{margin-bottom: 1.618em}
+.gap-bottom-xxl{margin-bottom: 2.618em}
+
+.gap-top-xs{margin-top: 0.128em}
+.gap-top-s{margin-top: 0.272em}
+.gap-top-m{margin-top: 0.618em}
+.gap-top-l{margin-top: 1em}
+.gap-top-xl{margin-top: 1.618em}
+.gap-top-xxl{margin-top: 2.618em}
 
 html{
     scroll-behavior: smooth; /*gør scroll-funktioner mere smooth, så de ikke bare "hopper"*/
@@ -83,24 +98,30 @@ main a:hover, footer a:hover{
 }
 
 /* Baggrunden breder sig over hele skærmen, selvom indholdet ikke gør + tilføjer lidt "padding"*/
+
+.full-width-background{
+    height: 100%;
+    padding-block: min(5vw, 3.2rem);
+}
+
 .full-width-background > *{
     margin-inline: auto;
-    width: min(95%, 64rem /*1024*/);
-    padding-block: 1rem;
+    width: min(90%, 64rem /*1024*/);
 }
+
+.center{text-align: center;}
 
 /* til stykker af tekst som står alene (kun i en kolonne) */
 .single{
-    padding-block: 2rem 4rem; /*giver lidt white-space over og under teksten*/ 
+    padding-block: 0rem 1rem; /*giver lidt white-space over og under teksten*/ 
     text-wrap: pretty; /*undgår at et enkelt ord bliver efterladt på en linje for sig selv - måske ikke alle browsere, der kender udtrykket*/
+    max-width: 60ch; /*sikrer at tekst-feltet ikke bliver for bredt (60 tegn (0'er))*/
 }
-.single p{   
-    max-width: 72ch; /*sikrer at tekst-feltet ikke bliver for bredt (72 tegn (0'er))*/
-}
+/* .single p{max-width: 60ch;} */
 
 /* stykker af tekst, som står alene i mobilvisning, men skal stå ved ssiden af noget andet på laptop */
 .text p{
-    max-width: 72ch; /*sikrer at tekst-felter ikke bliver for brede (60 tegn (0'er))*/
+    max-width: 50ch; /*sikrer at tekst-felter ikke bliver for brede (50 tegn (0'er, så ofter lidt flere tegn i virkeligheden))*/
     margin-inline-end: auto; /*lader evt kasse udfylde hele bredden, selvom teksten ikke gør.*/
 }
 
@@ -134,12 +155,13 @@ main a:hover, footer a:hover{
 
 @media screen and (min-width: 32em /*512px*/) {
     .single{
-        text-align: center;
-    }
-    
-    .single p{
+        /* text-align: center; */
         margin-inline: auto;
     }
+    
+    /* .single p{
+        margin-inline: auto;
+    } */
 
     .fitty-fitty{
         display: flex; /*deler pladsen ligeligt, hvis elementerne er lige store*/
@@ -167,7 +189,7 @@ main a:hover, footer a:hover{
     }
 
     .polaroid-split-grid .text p{   
-        max-width: 60ch; /*sikrer at tekst-feltet ikke bliver for bredt (60 tegn (0'er))*/
+        max-width: 50ch; /*sikrer at tekst-feltet ikke bliver for bredt (50 tegn (0'er, så ofte lidt flere tegn i virkeligheden))*/
     }
 
 }
@@ -178,7 +200,7 @@ main a:hover, footer a:hover{
         grid-template-columns: repeat(12, 1fr);
     }
 
-    .polaroid-split-grid .polaroid {
+    /* .polaroid-split-grid .polaroid {
         align-self: center;
         grid-column: span 5;
     }
@@ -186,6 +208,11 @@ main a:hover, footer a:hover{
     .polaroid-split-grid .text {
         align-self: center;
         grid-column: span 7;
+    } */
+
+    .polaroid-split-grid >* {
+        align-self: center;
+        grid-column: span 6;
     }
 
 }

@@ -18,6 +18,13 @@
 
 h1{font: 500 2rem/1.5 "Lora", serif; text-transform: uppercase; padding: 1rem;}
 
-.flexbox section{
-  flex: 8 8 0;
+@media screen and (min-width: 32em /*512px*/) {
+    .single{
+      text-align: center;
+      max-width: revert;
+    }
+    .single p{
+      max-width: 60ch;
+      margin-inline: auto;
+    }
 }

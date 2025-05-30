@@ -40,7 +40,7 @@
                 <li class="nav-item">
                     <input type="checkbox" id="vin-guide-toggle">
                     <div class="inline-label">
-                        <a href="#" target="_self">
+                        <a class="active" href="#" target="_self">
                             Vin-Guide <span class="doed-pil">▽</span>
                         </a>
                         <label for="vin-guide-toggle">▼</label>
@@ -95,7 +95,7 @@
 <!-- sub-header her = det blå stribe med breadcrums og adresse og åbningstider -->
         <div id="sub-header">
             <p class="tilbage">
-                Velkommen /<a href="index.html" target="_self"> ↩  Tilbage</a>
+                <a href="vin-til-mad.html" target="_self"> ↩  Tilbage</a>
             </p>
             <ul class="info">
                 <li style="display: inline;"><a href="#aabningstider">Åbningstider</a></li>
@@ -173,24 +173,30 @@
                 </div>
                 <div class="blok-beskrivelse-parametre">
                     <div class="beskrivelse">
-                        <h3>Beskrivelse:</h3>
+                        <h3 class="gap-bottom-xs">Beskrivelse:</h3>
                         <p>
-                            Solaris: Daggry er en blød og lækker vin med noter af æble, hasselnød og blåbær, som giver den en rundet dybde, som er helt perfekt til tapas, smagfulde oste og og pølser fra det spanske køkken. De let bitre noter i vinen fremhæver den krydrede smag i pølser og dybden i ost. <br> Optimal serveringstemperatur: 15°. <br>Ved opbevaring i køleskab, tages den ud 30 min. før servering.
+                            Solaris: Daggry er en kraftig og mellemsød hvidvin med aromatistke noter af æble, hasselnød og blåbær, som giver den en dybde, der passer fremragende til tapas, ved at fremhæve nuancerne i smagfulde oste og krydret kød fra det spanske køkken. 
+                        </p>
+                        <p class="gap-top-m">
+                            Optimal serveringstemperatur: 6-8°.
+                        </p>
+                        <p class="gap-top-xs">
+                            Ved opbevaring i køleskab, tages den ud 5 min. før servering.
                         </p>
                     </div>
-                    <i><img src="assets/smag-parametre.png" alt="Medium-sød, lettere syrlig og mild"></i>
+                    <i><img src="assets/smag-parametre.png" alt="Medium-sød, medium syre, til den kraftige side"></i>
                 </div>
-                <div class="anmeldelser">
-                    <figure>
-                        <blockquote>
+                <div class="anmeldelser"  >
+                    <figure style="border: 1px solid var(--shadow); padding: 1rem; border-radius: 4px;">
+                        <blockquote class="gap-top-l gap-bottom-m">
                             Helt perfekt til ost, pesto og salte snacks. Skabte stor begejstring hos gæsterne.
                         </blockquote>
                         <figcaption>
                             Hans Hansen, Vinekperten.dk <br> 12-03-2025
                         </figcaption>
                     </figure>
-                    <figure>
-                        <blockquote>
+                    <figure style="border: 1px solid var(--shadow); padding: 1rem; border-radius: 4px;">
+                        <blockquote class="gap-top-l gap-bottom-m">
                             Fornem og frisk vin til den søde side af danske vine. Stor anbefaling herfra.
                         </blockquote>
                         <figcaption>
@@ -204,10 +210,10 @@
 </main>
 <!-- .....................FOOTER................................. -->
     <footer class="full-width-background">
-        <a id="til-toppen" href="#top">Til toppen</a>
+        <a id="til-toppen" href="#top"  class="gap-bottom-m">Til toppen</a>
         <section class="footer-grid">
             <div id="aabningstider">
-                <h3>Åbningstider</h3>
+                <h3 class="gap-bottom-xs">Åbningstider</h3>
                 <p>
                     Mandag: ..... 9.00 - 16.00 <br>
                     Tirsdag: ...... 9.00 - 16.00 <br>
@@ -215,24 +221,25 @@
                     Torsdag: ..... 9.00 -  17.00 <br>
                     Fredag: ...... 9.00 - 20.00 <br>
                     Lørdag: ...... 9.00 - 20.00 <br>
-                    Søndag: ..... 9.00 - 20.00 <br><br>
-
+                    Søndag: ..... 9.00 - 20.00 
+                </p>
+                <p class="gap-top-m">
                     Ring eller <a href="#" target="_self">book</a> dit besøg <br>via hjemmesiden.
                 </p>
             </div>
             <div id="adresse">
-                <h3>Adresse</h3>
+                <h3 class="gap-bottom-xs">Adresse</h3>
                 <p>
                     Kystvejen 39 <br>
                     1234 Sydfyn <br>
-                    Danmark <br>
-                </p><br>
-                <h3>Kontakt</h3>
+                    Danmark
+                </p>
+                <h3 class="gap-top-l gap-bottom-xs">Kontakt</h3>
                 <p>Tlf.: 39 39 39 39 <br>
                 Mail.: kontakt@havblink.dk</p>
             </div>
             <div id="some">
-                <h3>Følg med</h3>
+                <h3 class="gap-bottom-m">Følg med</h3>
                 <div id="some-container"> 
                     <a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook.svg" alt="Facebook"></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.svg" alt="Instagram"></a>
