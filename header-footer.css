@@ -321,7 +321,7 @@ nav{ /*hele top-nav med checkbox, logo, burger, nav-links og cta-container*/
 
 .info{
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 /*....................................................Footer.....................................................*/
@@ -364,7 +364,7 @@ footer iframe{
     footer .footer-grid{
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     footer #aabningstider, footer #adresse, footer #some, footer #smiley-rapport{
@@ -382,7 +382,7 @@ footer iframe{
     footer .footer-grid{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     footer #aabningstider, footer #adresse, footer #some, footer #smiley-rapport{

@@ -12,7 +12,7 @@
 
 }
 #bgimg-1 {
-    background-image: url(images/vin-ranker-med-ovenlys.jpg);
+    background-image: url(images/hero/vin-ranker-med-ovenlys-alex-batonisashvili-unsplash.jpg);
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -26,23 +26,23 @@
 }
 
 #bgimg-2 {
-    background-image: url(images/gyldne-druer-i-massevis.jpg);
+    background-image: url(https://images.unsplash.com/photo-1659591061983-7332de19b78e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
 #bgimg-3 {
-    background-image: url(images/sukkerroe.jpg);
+    background-image: url(images/hero/sukkerroe-leopictures-pixabay.jpg);
 }
 
 #bgimg-4 {
-    background-image: url(https://images.unsplash.com/photo-1679418167231-5b0bd50e2536?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/hero/frossen-blad-nikita-zakharov-unsplash.jpg);
 }
 
 #bgimg-5 {
-    background-image: url(images/vinskud-i-solopgang.jpg);
+    background-image: url(images/hero/vinskud-i-solopgang-amir-taha-unsplash.jpg);
 }
 
 #bgimg-6 {
-    background-image: url(https://images.unsplash.com/photo-1659591061983-7332de19b78e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/hero/gyldne-druer-i-massevis-thomas-schaefer-unsplash.jpg);
 }
 
 #bgimg-7 {

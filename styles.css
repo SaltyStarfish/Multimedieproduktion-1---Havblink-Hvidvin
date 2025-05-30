@@ -175,7 +175,7 @@ main a:hover, footer a:hover{
 /* Gentaget sektion med tekst og polaroid */
     .polaroid-split-grid{
         display: grid;
-        gap: 1.5rem;
+        gap: 2rem;
         grid-template-columns: repeat(8, 1fr);
     }
 
@@ -196,7 +196,7 @@ main a:hover, footer a:hover{
 @media screen and (min-width: 48em /*768px*/){
     .polaroid-split-grid {/*her bruges grid, fordi elementerne ikke skal fordeles lige, men justeres efter 12 kolonner*/
         display: grid;
-        gap: 1.5rem;
+        gap: 2rem;
         grid-template-columns: repeat(12, 1fr);
     }
 

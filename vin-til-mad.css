@@ -39,7 +39,7 @@
 @media screen and (min-width: 42em /*672px*/) {
     .vin-til-mad-section{
         display: grid;
-        gap: 1.5rem;
+        gap: 2rem;
         grid-template-columns: repeat(8, 1fr);
     }
 
