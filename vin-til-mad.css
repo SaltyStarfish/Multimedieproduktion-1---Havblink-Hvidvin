@@ -32,8 +32,74 @@
     box-shadow:  0 10px 10px var(--shadow);
     color: var(--hvid);
     text-shadow: 0 4px 4px var(--shadow);
-    background-image: linear-gradient(var(--blaa2)), url(https://plus.unsplash.com/premium_photo-1729688846271-889336584603?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
 
+.kategori1{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/asiatisk-emy-unsplash.jpg);
+}
+
+.kategori2{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/brunch-priscilla-du-preez-unsplash.jpg);
+}
+
+.kategori3{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/desserter-eugene-krasnaok-unsplash.jpg);
+}
+
+.kategori4{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/fisk-sebastian-coman-photography-unsplash.jpg);
+}
+
+.kategori5{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/frugt-vd-photography-unsplash.jpg);
+}
+
+.kategori6{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/kalkun-hayley-ryczek-unsplash.jpg);
+}
+
+.kategori7{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/kylling-hybrid-storytellers-unsplash.jpg);
+}
+
+.kategori8{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/ost-farhad-ibrahimzade-unsplash.jpg);
+}
+
+.kategori9{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/pasta-karolina-kolodziejczak-unsplash.jpg);
+}
+
+.kategori10{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/pizza-amirali-mirhashemian-unsplash.jpg);
+}
+
+.kategori11{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/risotto-luna-hu-unsplash.jpg);
+}
+
+.kategori12{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/salat-chris-tweten-unsplash.jpg);
+}
+
+.kategori13{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/skaldyr-lisha-riabinina-unsplash.jpg);
+}
+
+.kategori14{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/suppe-bakd-raw-by-karolin-baitinger-unsplash.jpg);
+}
+
+.kategori15{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/svinekoed-katharina-klinski-pixabay.jpg);
+}
+
+.kategori16{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/tapas-berenice-martinez-unsplash.jpg);
+}
+
+.kategori17{
+    background-image: linear-gradient(var(--blaa2)), url(images/kategorier/vegetarisk-louis-hansel-unsplash.jpg);
 }
 
 @media screen and (min-width: 42em /*672px*/) {

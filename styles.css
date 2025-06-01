@@ -31,14 +31,14 @@ li, a, button{
 
 /* Farver der genbruges mange steder kan bestemmes og ændres her*/
 :root{
-  --orange:#f6a902;
-  --gul:#f4cc70;
-  --groen:#a6be47;
-  --blaa:#194d62;
-  --blaa2:#194d62d0;
-  --hvid:#fbf7ef;
-  --sort:#2f3131;
-  --shadow:#2f31312e;
+  --orange:rgb(246, 169, 2);
+  --gul:rgb(244, 204, 112);
+  --groen: rgba(136, 176, 75)/*#a6be47*/;
+  --blaa:rgba(0, 82, 100)/*#194d62*/;
+  --blaa2: rgba(0, 82, 100, 0.7) /*#194d62d0*/;
+  --hvid: rgb(255, 250, 240)/*#fbf7ef*/;
+  --sort:rgb(47, 49, 49);
+  --shadow: rgba(47, 49, 49, .2);
 }
 
 /* Typografi */
@@ -89,12 +89,14 @@ main a:hover, footer a:hover{
 
 /* .................. "BYGGEKLODSER" .....................*/
 .texture{/*baggrund */
-    background-image:url(https://images.unsplash.com/photo-1601662528567-526cd06f6582?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image:url(images/hero/texture-olga-thelavart-unsplash.jpg);
+    box-shadow: 0 4px 10px var(--shadow), 0 -4px 10px var(--shadow);
 }
 
 .waves{/*baggrund:*/
     background-color: var(--hvid);
     background-image: url(assets/green-waves.svg);
+    box-shadow: 0 4px 10px var(--shadow), 0 -4px 10px var(--shadow);
 }
 
 /* Baggrunden breder sig over hele skærmen, selvom indholdet ikke gør + tilføjer lidt "padding"*/
@@ -117,7 +119,6 @@ main a:hover, footer a:hover{
     text-wrap: pretty; /*undgår at et enkelt ord bliver efterladt på en linje for sig selv - måske ikke alle browsere, der kender udtrykket*/
     max-width: 60ch; /*sikrer at tekst-feltet ikke bliver for bredt (60 tegn (0'er))*/
 }
-/* .single p{max-width: 60ch;} */
 
 /* stykker af tekst, som står alene i mobilvisning, men skal stå ved ssiden af noget andet på laptop */
 .text p{
@@ -141,7 +142,7 @@ main a:hover, footer a:hover{
 
 .polaroid img{
     aspect-ratio: 1/1;
-    grid-row: span 3;/*billedet får lov at strække sig over 3 rækker, mens billedteksten får den sidster række*/
+    grid-row: span 3;/*billedet får lov at strække sig over 3 rækker, mens billedteksten får den sidste række*/
     border: 1px solid var(--shadow);
     object-fit: cover;
 }
@@ -153,19 +154,21 @@ main a:hover, footer a:hover{
     text-align: center;
 }
 
+.fitty-fitty{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 @media screen and (min-width: 32em /*512px*/) {
     .single{
         /* text-align: center; */
         margin-inline: auto;
     }
-    
-    /* .single p{
-        margin-inline: auto;
-    } */
 
     .fitty-fitty{
         display: flex; /*deler pladsen ligeligt, hvis elementerne er lige store*/
-        gap: 1.5rem;
+        flex-direction: row;
     }
 
     .fitty-fitty > *{
@@ -199,16 +202,6 @@ main a:hover, footer a:hover{
         gap: 2rem;
         grid-template-columns: repeat(12, 1fr);
     }
-
-    /* .polaroid-split-grid .polaroid {
-        align-self: center;
-        grid-column: span 5;
-    }
-
-    .polaroid-split-grid .text {
-        align-self: center;
-        grid-column: span 7;
-    } */
 
     .polaroid-split-grid >* {
         align-self: center;

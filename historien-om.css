@@ -26,7 +26,7 @@
 }
 
 #bgimg-2 {
-    background-image: url(https://images.unsplash.com/photo-1659591061983-7332de19b78e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/hero/mand-mellem-vinranker-mathew-benoit-unsplash.jpg);
 }
 
 #bgimg-3 {
@@ -46,7 +46,7 @@
 }
 
 #bgimg-7 {
-    background-image: url(https://images.unsplash.com/photo-1659591061983-7332de19b78e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(images/hero/vin-i-solnedgang-by-stine-jensen.jpg);
 }
 
 
@@ -56,6 +56,10 @@
 
 #foelg-med figcaption{
     flex-direction: column;
+    color: var(--orange);
+}
+#foelg-med figcaption:hover{
+    color: var(--gul);
 }
 
 #foelg-med .polaroid:hover{

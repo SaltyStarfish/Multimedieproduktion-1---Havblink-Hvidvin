@@ -7,14 +7,18 @@
     overflow: hidden; /* Beskærer overskydende dele af videoen */
 }
 
-#hero-container img {
+#hero-container video {
     width: 100vw; /* Fylder hele skærmbredden */
     height: 80vh;
     object-fit: cover; /* Beskærer video korrekt */
 }
 
-
-/* hero */
+#hero-container img {
+  position: absolute;
+  inset: 0;
+  margin: auto; /*centrerer logoet*/
+  width: min(70%, 32rem);
+}
 
 h1{font: 500 2rem/1.5 "Lora", serif; text-transform: uppercase; padding: 1rem;}
 

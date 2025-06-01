@@ -1,3 +1,4 @@
+.single{text-align: center;}
 
 /*.......styling af "vin-hjul"......*/
 .vin-hjul{
@@ -43,6 +44,21 @@
     align-items: center;
     gap: 2rem;
     width: 100%
+}
+
+.webshop-link{
+    width: 80%;
+    color: var(--hvid);
+    background-color: var(--blaa);
+    font: 400 0.75rem/1.5 "Inter", sans-serif; 
+    text-transform: uppercase;
+    border: 2px solid var(--shadow); 
+    transition: box-shadow 0.1s ease-in-out 0.1s;
+}
+
+.webshop-link:hover{
+    color: var(--gul);
+    box-shadow: inset 0px 2px 2px var(--shadow);
 }
 
 .vin-info-grid > .blok-beskrivelse-parametre{

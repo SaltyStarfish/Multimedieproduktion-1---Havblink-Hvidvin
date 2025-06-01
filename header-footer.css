@@ -91,7 +91,6 @@ header #logo img{
 #header-webshop{
     background: transparent;
     border: 2px solid var(--blaa); 
-    border-radius: 4px;
     color: var(--blaa);
     transition: box-shadow 0.1s ease-in-out 0.1s;
 }
